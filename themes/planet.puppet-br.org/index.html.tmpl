@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><TMPL_VAR name></title>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+  <link rel="stylesheet" href="/theme/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <h1>Planeta Puppet-BR</h1>
+          <small>Puppet é uma ferramenta de gerenciamento open source para centralização e automação de configuração.</small>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <TMPL_LOOP Items>
+          <article class="post-block">
+            <h2 class="post-title">
+              <a<TMPL_IF link> href="<TMPL_VAR link ESCAPE="HTML">"</TMPL_IF><TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF>>
+                <TMPL_VAR title>
+              </a>
+              <small class="post-author">por <a href="<TMPL_VAR channel_link ESCAPE="HTML">"><TMPL_VAR channel_name ESCAPE="HTML"></a></small>
+            </h2>
+
+            <div class="post-content">
+              <TMPL_VAR content>
+            </div>
+
+          </article>
+        </TMPL_LOOP>
+      </div>
+      <div class="col-xs-2 sidebar">
+        <h3>Blogs Inscritos</h3>
+        <ul class="blogs">
+          <TMPL_LOOP Channels>
+            <li><a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a></li>
+          </TMPL_LOOP>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <a href="http://configr.com">
+            <img src="/theme/assets/img/configr.png" alt="" class="pull-left configr" >
+          </a>
+          <a href="http://www.instruct.com.br">
+            <img src="/theme/assets/img/instruct.png" alt="" class="pull-right instruct">
+          </a>  
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
