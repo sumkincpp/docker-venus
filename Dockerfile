@@ -8,7 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python xsltproc python-lxm
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install planet-venus
 
-ADD planet.ini /opt/planet.ini
+#ADD planet.ini /opt/planet.ini
 
 VOLUME /opt/planet
 
