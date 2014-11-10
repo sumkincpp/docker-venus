@@ -1,3 +1,4 @@
 .vagrant/*
 data/output/*
 data/cache/*
+*.tmplc

@@ -1,4 +1,4 @@
-from ubuntu:12.04
+from ubuntu:14.10
 
 MAINTAINER Fedor Sumkin <qosys.net@gmail.com>
 
@@ -14,4 +14,7 @@ VOLUME /opt/planet
 
 WORKDIR /opt/planet
 
-ENTRYPOINT ["planet", "--verbose", "/opt/planet.ini"]
+
+CMD ["planet", "--verbose", "/opt/planet.ini"]
+
+ENTRYPOINT ["planet"]
