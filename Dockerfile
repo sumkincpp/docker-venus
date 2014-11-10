@@ -1,4 +1,4 @@
-from ubuntu:14.10
+from debian:jessie
 
 MAINTAINER Fedor Sumkin <qosys.net@gmail.com>
 
